@@ -1,9 +1,15 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import { remarkCodeHike, recmaCodeHike } from "codehike/mdx";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
+const chConfig = {
+  components: { code: "MyCode" },
+  syntaxHighlighting: {
+    theme: "github-dark",
+  },
+}
 const config: Config = {
   title: 'Trusted Foundations',
   tagline: 'Software supply chain security tutorials and tips',
@@ -36,6 +42,8 @@ const config: Config = {
       'classic',
       {
         docs: {
+          beforeDefaultRemarkPlugins: [[remarkCodeHike, chConfig]],
+          recmaPlugins: [[recmaCodeHike, chConfig]],
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -82,7 +90,8 @@ const config: Config = {
       title: 'Trusted Foundations',
       logo: {
         alt: 'Logo',
-        src: 'img/logo.svg',
+        // src: 'img/logo.svg',
+        src: 'img/trusted-foundations-icon.svg',
       },
       items: [
         {
@@ -119,7 +128,7 @@ const config: Config = {
           items: [
             {
               label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              href: 'https://stackoverflow.com/questions/tagged/supply-chain-security',
             },
             {
               label: 'Discord',

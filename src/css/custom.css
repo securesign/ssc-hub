@@ -1,3 +1,5 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -27,4 +29,33 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+
+.footer--dark {
+  --ifm-footer-background-color: #212427;
+}
+
+.footer__bottom {
+  margin-top: 5em;
+}
+
+
+/* Make the screen narrower for easy reading */
+@media (min-width: 1416px) {
+  .main-wrapper {
+    align-self: center;
+    max-width: 1400px;
+    width: 1400px;
+  }
+}
+
+.navbar .navbar__inner {
+  margin: 0 auto;
+  max-width: 1360px;
+}
+
+
+.docusaurus-mermaid-container {
+  text-align: center;
 }

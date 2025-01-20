@@ -1,0 +1,187 @@
+---
+sidebar_position: 2
+slug: "/sbom-software-bill-of-materials"
+---
+import { Scrollycoding } from "/src/components/scrollycoding";
+
+# What is a Software Bill of Materials (SBOM)?
+
+In recent years, the relevance of SBOMs has increased rapidly, with regulatory mandates like PCI DSS and other government requirements specifically requiring SBOM adoption for compliance.
+
+A **Software Bill of Materials**, or **SBOM**, is an inventory file that lists all components within a piece of software, including any dependencies. Those components can include anything from open source libraries, APIs, licenses, and known vulnerabilities.
+
+## Why SBOMs are important in vulnerability management
+
+The applications we build and use everyday ship with many dependencies. Those dependencies are then likely have _their own_ dependencies, which, in turn, might consist of _their_ own dependencies, and so on. When you consider that any single one of those dependencies can be exploited, it's easy to see why it's important that we are able to track and monitor them.
+
+Luckily, an SBOM allows for just that. SBOMs aid transparency by providing a birds eye view of all elements of an application in addition to key security information about the software. This makes it substantially easier to make time-critical decisions and to identify security risks ahead of time.
+
+Moreover, when something _does_ go wrong, an SBOM can provide detailed information needed to identify the vulnerable component. This facilitates incident response, so the team can assess, prioritize, and act accordingly.
+
+## Core Elements of an SBOM
+
+SBOMs are designed to help both vendors and developers alike, and typically contain elements such as licensing and versioning information, components and dependencies, and other relevant metadata.
+
+Let's explore these elements by reviewing a basic example of an SBOM:
+
+<Scrollycoding>
+
+## !!steps Metadata
+
+Metadata contains information about the software component, such as the `name` and specific `version` of the component being used.
+
+{/* prettier-ignore */}
+```json ! sbom.json
+{
+  "sbomVersion": "1.0",
+  "metadata": {
+    "name": "Trusted-Foundations-App",
+    "version": "1.0.0",
+    "author": "Rachel Yordán",
+    "timestamp": "2025-01-20T12:00:00Z"
+  }
+}
+```
+
+## !!steps Components
+
+`components` contains information about the component the SBOM pertains to. You can see where the component originated from with the `source` property, and any external references for additional information about the component. You may also see vulnerability data (an optional element), which describes known security risks associated with the component.
+
+{/* prettier-ignore */}
+```json ! sbom.json
+{
+  "sbomVersion": "1.0",
+  "metadata": {..},
+  "components": [
+    {
+      "name": "react",
+      "version": "18.2.0",
+      "license": "MIT",
+      "source": "https://github.com/facebook/react",
+      "type": "library"
+    },
+    {
+      "name": "typescript",
+      "version": "5.2.2",
+      "license": "Apache-2.0",
+      "source": "https://github.com/microsoft/TypeScript",
+      "type": "tool"
+    },
+    {
+      "name": "webpack",
+      "version": "5.88.0",
+      "license": "MIT",
+      "source": "https://github.com/webpack/webpack",
+      "type": "tool"
+    },
+    {
+      "name": "@testing-library/react",
+      "version": "14.0.0",
+      "license": "MIT",
+      "source": "https://github.com/testing-library/react-testing-library",
+      "type": "library"
+    },
+    {
+      "name": "node",
+      "version": "18.16.0",
+      "license": "MIT",
+      "source": "https://nodejs.org/",
+      "type": "runtime"
+    },
+    {
+      "name": "fastify",
+      "version": "4.20.2",
+      "license": "MIT",
+      "source": "https://github.com/fastify/fastify",
+      "type": "library"
+    }
+  ],
+  "dependencies": [
+    ..
+  ],
+}
+```
+
+## !!steps Dependencies
+
+Dependency relationships show how components depend on and interact with one another.
+
+{/* prettier-ignore */}
+```json ! sbom.json
+{
+  "components": [..],
+  "dependencies": [
+    {
+      "component": "react",
+      "dependencies": ["typescript", "@testing-library/react"]
+    },
+    {
+      "component": "webpack",
+      "dependencies": []
+    },
+    {
+      "component": "node",
+      "dependencies": ["fastify"]
+    }
+  ],
+}
+```
+
+## !!steps Adding a Note
+
+You can also add notes to any SBOM.
+
+{/* prettier-ignore */}
+```json ! sbom.json
+{
+  "dependencies": [..],
+  "notes": "This SBOM is the best SBOM."
+}
+```
+
+## !!steps Putting it Together
+
+The structure of the SBOM will vary based on the formatting you choose when you create it (more on that below), but these are generally the elements of an SBOM.
+
+{/* prettier-ignore */}
+```json ! sbom.json
+{
+  "sbomVersion": "1.0",
+  "metadata": {
+    "name": "Trusted-Foundations-App",
+    "version": "1.0.0",
+    "author": "Rachel Yordán",
+    "timestamp": "2025-01-20T12:00:00Z"
+  },
+  "components": [..],
+  "dependencies": [..],
+  "notes": "This SBOM is the best SBOM."
+}
+```
+
+
+</Scrollycoding>
+
+
+## Common SBOM formats
+
+The two most common SBOM formats are **Software Package Data Exchange (SPDX)** and **CycloneDX**.
+
+Alternatively, regulatory bodies also consider **Software Identification (SWID) tags** to be acceptable SBOM formats.
+
+## Generating an SBOM
+
+An SBOM can be created manually or automatically. Generating an SBOM automatically involves integrating the appropriate tools with your Continuous Integration / Continuous Deployment (CI/CD) pipeline. Popular tools include CycloneDX, Syft, and SPDX, which also format the SBOMs to widely accepted standards. The tools analyze the dependencies before generating an SBOM file, which typically has a file extension of **XML** or **JSON**.
+
+Alternatively, you can create an SBOM manually by listing all components and their versions, along with any other relevant information, by tracking it on a spreadsheet. Please note, however, that this approach is subject to human error.
+
+## SBOMs and Software Supply Chain Security
+
+One of the most critical use cases for SBOMs is in enhancing software supply chain security. Cyberattacks like the SolarWinds breach highlighted how attackers can exploit vulnerabilities in software supply chains. With an SBOM, organizations can quickly identify compromised components, assess the impact of newly disclosed vulnerabilities, and communicate risks effectively across teams and partners.
+
+## The Future of SBOMs
+
+Governments and organizations worldwide are beginning to mandate SBOM usage. For example, the U.S. Executive Order on Improving the Nation’s Cybersecurity calls for SBOMs in critical software development. As these requirements grow, SBOMs are poised to become a standard practice in software development and deployment.
+
+An SBOM is more than just a technical document; it’s a cornerstone of modern software security and transparency. By adopting SBOMs, organizations can improve security, ensure compliance, and build trust with users and stakeholders. As software ecosystems grow more complex, SBOMs will play an indispensable role in maintaining a secure and resilient digital world.
+

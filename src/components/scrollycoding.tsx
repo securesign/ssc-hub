@@ -1,15 +1,15 @@
-import { z } from "zod"
+import { z } from "zod";
 import {
   Selection,
   Selectable,
   SelectionProvider,
-} from "codehike/utils/selection"
-import { Block, HighlightedCodeBlock, parseProps } from "codehike/blocks"
-import { HighlightedCode, Pre } from "codehike/code"
+} from "codehike/utils/selection";
+import { Block, HighlightedCodeBlock, parseProps } from "codehike/blocks";
+import { HighlightedCode, Pre } from "codehike/code";
 
-import { tokenTransitions } from "./annotations/token-transitions"
-import { wordWrap } from "./annotations/word-wrap"
-import styles from "./scrollycoding.module.css"
+import { tokenTransitions } from "./annotations/token-transitions";
+import { wordWrap } from "./annotations/word-wrap";
+import styles from "./scrollycoding.module.css";
 
 const Schema = Block.extend({
   steps: z.array(

@@ -1,10 +1,10 @@
 ---
-sidebar_position: 5
+sidebar_position: 500
 sidebar_label: "About These Docs"
 slug: "about-these-docs"
 title: "About These Docs"
 ---
-import { Highlight } from "../src/components/Highlight";
+import { Highlight } from "../components/Highlight";
 
 # ✏️️ Contributing
 

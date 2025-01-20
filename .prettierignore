@@ -1,0 +1,11 @@
+# Ignore artifacts:
+build*
+node_modules*
+LICENSE
+.gitignore
+.tekton
+.github
+assets
+coverage
+out
+public

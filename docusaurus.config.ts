@@ -101,12 +101,12 @@ const config: Config = {
 			links: [
 				{
 					title: "Docs",
-					items: [
-						{
-							label: "Tutorial",
-							to: "/docs/category/security-fundamentals",
-						},
-					],
+					// items: [
+					// 	{
+					// 		label: "Tutorial",
+					// 		to: "/docs/category/security-fundamentals",
+					// 	},
+					// ],
 				},
 				{
 					title: "Community",

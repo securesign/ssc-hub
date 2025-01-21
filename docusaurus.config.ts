@@ -18,12 +18,10 @@ const config: Config = {
 	favicon: "img/trusted-foundations-icon.ico",
 
 	// production url
-	url: "https://securesign.github.io",
-	// url: "https://trustedfoundations.dev",
+	url: "https://trustedfoundations.dev",
 	// Set the /<baseUrl>/ pathname under which your site is served
 	// For GitHub pages deployment, it is often '/<projectName>/'
-	baseUrl: "/trusted-foundations/",
-	// baseUrl: "/",
+	baseUrl: "/",
 	trailingSlash: false,
 
 	// GitHub pages deployment config.

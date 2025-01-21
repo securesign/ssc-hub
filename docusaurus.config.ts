@@ -97,24 +97,24 @@ const config: Config = {
 		footer: {
 			style: "dark",
 			links: [
-				{
-					title: "Docs",
-					// items: [
-					// 	{
-					// 		label: "Tutorial",
-					// 		to: "/docs/category/security-fundamentals",
-					// 	},
-					// ],
-				},
-				{
-					title: "Community",
-					items: [
-						{
-							label: "Stack Overflow",
-							href: "https://stackoverflow.com/questions/tagged/supply-chain-security",
-						},
-					],
-				},
+				// {
+				// 	title: "Docs",
+				// items: [
+				// 	{
+				// 		label: "Tutorial",
+				// 		to: "/docs/category/security-fundamentals",
+				// 	},
+				// ],
+				// },
+				// {
+				// 	title: "Community",
+				// 	items: [
+				// 		{
+				// 			label: "Stack Overflow",
+				// 			href: "https://stackoverflow.com/questions/tagged/supply-chain-security",
+				// 		},
+				// 	],
+				// },
 				{
 					title: "More",
 					items: [
@@ -146,16 +146,11 @@ const config: Config = {
 				{
 					type: "docSidebar",
 					sidebarId: "tutorialSidebar",
-					position: "left",
+					position: "right",
 					label: "Learning",
 				},
 				// {to: '/blog', label: 'Blog', position: 'left'},
 				// { href: "/resources", label: "Resources", position: "left" },
-				{
-					href: "https://github.com/securesign/trusted-foundations",
-					label: "GitHub",
-					position: "right",
-				},
 			],
 		},
 		prism: {

@@ -1,5 +1,21 @@
 ---
-draft: true
+slug: "/what-is-software-provenance-and-why-is-it-important-for-security"
 ---
 
 # Provenance
+
+In the context of software, **provenance** refers to the origin or source of the code. It aims to answer questions like, _Where did this code or system come from? Who wrote it? Who built it? Has it been changed over time? Who verified it?_
+
+These kind of questions are tantamount to risk management and ensuring the integrity of our systems, because when you know exactly where a particular piece of software comes from, you are in a much greater position to identify trusted sources and potential risks.
+
+Provenance is an important factor in software supply chain security, and a key element of [compliance](/category/compliance), where regulations (e.g. GDPR, HIPAA) may require organizations to track and document software origins to ensure proper data handling and security.
+
+## How does provenance work?
+
+We can incorporate provenance into our software delivery lifecycle using a variety of approaches, but the most common being a version control system, or VCS, like git or Mercurial. A VCS tracks changes in code and show who made what changes and when.
+
+**Digital signatures** are becoming increasingly relevant in this space, as they provide developers and organizations the ability to sign software releases to prove authenticity (for example, using vendor agnostic tools like <a href="https://sigstore.dev" rel="nofollow" target="_blank">Sigstore</a>).
+
+[SBOMs](/what-is-an-sbom-software-bill-of-materials-and-why-does-it-matter) are detailed lists of all the components and dependencies in a software project, which can also aid in providing the transparency required for provenance.
+
+In addition, there are specific provenance tracking tools available, with two of the most popular being [in-toto](https://in-toto.io/) and [SLSA](/slsa-supply-chain-levels-compliance-for-software).

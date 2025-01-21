@@ -1,3 +1,7 @@
+---
+slug: "/slsa-supply-chain-levels-compliance-for-software"
+---
+
 # SLSA Compliance
 
 **Supply-Chain Levels for Software Artifacts**, or **SLSA** _(pronounced "salsa")_, is a security framework providing guidance on building and delivering software securely.

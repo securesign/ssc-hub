@@ -33,6 +33,8 @@ Supply chain attacks are not a new concept. A well-known example is the Trojan h
 
 But hidden within the horse were Greek soldiers, who emerged at night to open the gates for their army, leading to Troy's fall. The Greeks didn't attack directly; they exploited trust in the "supply."
 
+Supply chain attacks have become more sophisticated over time, but are still regular occurrences around the world on a daily basis. Think counterfeit goods, tampered machinery and materials, to name just a few.
+
 In software, supply chain attacks work similarly: attackers corrupt a trusted source or process, leading to widespread compromise. As a consumer, how can you be certain that the software you receive hasn't been tampered with along the way?
 
 ## Shifting Left: Evolution of Attacks
@@ -45,19 +47,21 @@ Over time, attackers have shifted their focus further up the chain. Instead of t
 
 In parallel, they employ broader tactics like ransomware, data breaches, and intellectual property theft, disrupting supply chains and rendering organizations unable to deliver their products or services.
 
+One example of a recent supply chain attack was the SolarWinds hack in 2020. Hackers infiltrated the build process of SolarWinds' Orion software (a popular IP network management tool) and added malware to an update, causing customers who trusted in SolarWinds to install the malware unknowingly.
+
 :::info[Did You Know?]
 
 1 in 5 data breaches is a software supply chain attack.
 
 :::
 
-This raises a critical question: **What if the code you trust the most is what makes your systems vulnerable?**
+These events raise a critical question: **What if the code you trust the most is what makes your systems vulnerable?**
 
-In many cases, there’s no guarantee that the software we run is the same as the software we built. This gap creates opportunities for attackers to exploit.
+In many cases, there is no guarantee that the software we run is the same as the software we built. This gap creates opportunities for attackers to exploit.
 
 ### Who is involved in a supply chain?
 
-If your organization provides products or services to others, your organization is part of the supply chain. Imagine making a pizza:
+If your organization provides products or services to others, your organization is part of the supply chain. Imagine the steps involved in making a pizza:
 
 1.	A farmer grows tomatoes.
 2.	A factory turns tomatoes into sauce.
@@ -66,21 +70,19 @@ If your organization provides products or services to others, your organization 
 5.	A pizzeria assembles the ingredients into a pizza.
 6.	The pizza is delivered to your door.
 
-Each step involves different participants, each contributing to the final product. If any part of this process is disrupted or tampered with, the quality and safety of the pizza are at risk.
+Each step involves different participants, each contributing to the final product. If _any_ part of this process is disrupted or tampered with, the quality and safety of the pizza are at risk. Software supply chains don't operate all that differently. Let's take a closer look in the next section.
 
 ### Software Supply Chains
 
-Software supply chains operate similarly to traditional supply chains. Here's a simplified view:
+A **software supply chain** is an interconnected network of people, processes, software libraries, firmware, and technologies used in the creation, development, publication, production, and distribution of digital products. The primary difference to general supply chain security is the software or firmware development and its distribution.
+
+Here is a simplified view of a software supply chain:
 
 ```mermaid
 flowchart LR
     Source-->Build
     Build-->Deploy
     Deploy-->Monitor
-    click Source callback "Tooltip for a callback"
-    click Build "#" "This is a tooltip for a link"
-    click C call callback() "Tooltip for a callback"
-    click D href "#" "This is a tooltip for a link"
 
 ```
 
@@ -89,4 +91,4 @@ flowchart LR
 3. **Deploy**: Delivering software to customers or systems.
 4. **Monitor**: Observing software in production to detect issues.
 
-Traditionally, cybersecurity focused on "Source" and "Monitor." However, incidents like Log4Shell have demonstrated the need to secure the entire chain—especially build and deployment processes.
+Traditionally, the world has focused on "Source" and "Monitor." However, incidents like Log4Shell have demonstrated the need to secure the entire chain—especially build and deployment processes.

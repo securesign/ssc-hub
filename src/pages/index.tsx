@@ -23,7 +23,7 @@ function HomepageHeader() {
 				<div className={styles.buttons}>
 					<Link
 						className="button button--secondary button--lg"
-						to="#"
+						to="/software-supply-chain-security"
 					>
 						Software Supply Chain Security in 5min ⏱️
 					</Link>

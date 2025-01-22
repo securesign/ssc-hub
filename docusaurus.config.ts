@@ -18,7 +18,7 @@ const config: Config = {
 	favicon: "img/trusted-foundations-icon.ico",
 
 	// production url
-	url: "https://trustedfoundations.dev",
+	url: "https://www.trustedfoundations.dev",
 	// Set the /<baseUrl>/ pathname under which your site is served
 	// For GitHub pages deployment, it is often '/<projectName>/'
 	baseUrl: "/",
@@ -75,9 +75,6 @@ const config: Config = {
 				//   onInlineAuthors: 'warn',
 				//   onUntruncatedBlogPosts: 'warn',
 				// },
-				gtag: {
-					trackingID: "G-CWTDJL6TEQ",
-				},
 				theme: {
 					customCss: "./src/css/custom.css",
 				},

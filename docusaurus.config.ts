@@ -50,6 +50,11 @@ const config: Config = {
 		[
 			"classic",
 			{
+				gtag: {
+					trackingID: "G-CWTDJL6TEQ",
+				},
+			},
+			{
 				docs: {
 					beforeDefaultRemarkPlugins: [[remarkCodeHike, chConfig]],
 					recmaPlugins: [[recmaCodeHike, chConfig]],
@@ -115,19 +120,19 @@ const config: Config = {
 				// 		},
 				// 	],
 				// },
-				{
-					title: "More",
-					items: [
-						// {
-						//   label: 'Blog',
-						//   to: '/blog',
-						// },
-						{
-							label: "GitHub",
-							href: "https://github.com/securesign/trusted-foundations",
-						},
-					],
-				},
+				// {
+				// 	title: "More",
+				// 	items: [
+				// 		// {
+				// 		//   label: 'Blog',
+				// 		//   to: '/blog',
+				// 		// },
+				// 		{
+				// 			label: "GitHub",
+				// 			href: "https://github.com/securesign/trusted-foundations",
+				// 		},
+				// 	],
+				// },
 			],
 			copyright: `Copyright © ${new Date().getFullYear()} Trusted Foundations`,
 		},

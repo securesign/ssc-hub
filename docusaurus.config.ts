@@ -50,11 +50,6 @@ const config: Config = {
 		[
 			"classic",
 			{
-				gtag: {
-					trackingID: "G-CWTDJL6TEQ",
-				},
-			},
-			{
 				docs: {
 					beforeDefaultRemarkPlugins: [[remarkCodeHike, chConfig]],
 					recmaPlugins: [[recmaCodeHike, chConfig]],
@@ -80,6 +75,9 @@ const config: Config = {
 				//   onInlineAuthors: 'warn',
 				//   onUntruncatedBlogPosts: 'warn',
 				// },
+				gtag: {
+					trackingID: "G-CWTDJL6TEQ",
+				},
 				theme: {
 					customCss: "./src/css/custom.css",
 				},

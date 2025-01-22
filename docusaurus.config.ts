@@ -14,7 +14,7 @@ const chConfig = {
 
 const config: Config = {
 	title: "Trusted Foundations",
-	tagline: "Software supply chain security tutorials and tips",
+	tagline: "Notes and tutorials",
 	favicon: "img/trusted-foundations-icon.ico",
 
 	// production url
@@ -55,10 +55,6 @@ const config: Config = {
 					recmaPlugins: [[recmaCodeHike, chConfig]],
 					routeBasePath: "/", // serve the docs at the site's root
 					sidebarPath: "./sidebars.ts",
-					// Please change this to your repo.
-					// Remove this to remove the "edit this page" links.
-					// editUrl:
-					//   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
 				},
 				// blog: {
 				//   showReadingTime: true,
@@ -66,10 +62,6 @@ const config: Config = {
 				//     type: ['rss', 'atom'],
 				//     xslt: true,
 				//   },
-				//   // Please change this to your repo.
-				//   // Remove this to remove the "edit this page" links.
-				//   editUrl:
-				//     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
 				//   // Useful options to enforce blogging best practices
 				//   onInlineTags: 'warn',
 				//   onInlineAuthors: 'warn',
@@ -131,27 +123,25 @@ const config: Config = {
 			],
 			copyright: `Copyright © ${new Date().getFullYear()} Trusted Foundations`,
 		},
-		// Replace with your project's social card
-		// image: 'img/docusaurus-social-card.jpg',
+		// social card
 		image: "img/trusted-foundations-icon.svg",
-		metadata: [{ name: "keywords", content: "open source, security" }],
+		metadata: [
+			{ name: "keywords", content: "software supply chain, security" },
+		],
 		navbar: {
 			title: "Trusted Foundations",
 			logo: {
 				alt: "Logo",
-				// src: 'img/logo.svg',
 				src: "img/trusted-foundations-icon.svg",
 			},
-			items: [
-				{
-					type: "docSidebar",
-					sidebarId: "tutorialSidebar",
-					position: "right",
-					label: "Learning",
-				},
-				// {to: '/blog', label: 'Blog', position: 'left'},
-				// { href: "/resources", label: "Resources", position: "left" },
-			],
+			// items: [
+			// 	{
+			// 		type: "docSidebar",
+			// 		sidebarId: "tutorialSidebar",
+			// 		position: "right",
+			// 		label: "Learning",
+			// 	},
+			// ],
 		},
 		prism: {
 			theme: prismThemes.github,

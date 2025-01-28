@@ -42,7 +42,7 @@ export default function Home(): ReactNode {
 		>
 			<HomepageHeader />
 			<main>
-				<Redirect to="/software-supply-chain-security" />;
+				{/*<Redirect to="/software-supply-chain-security" />;*/}
 				<HomepageFeatures />
 			</main>
 		</Layout>

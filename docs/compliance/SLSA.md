@@ -4,7 +4,7 @@ title: "SLSA ・ Supply-chain Levels for Software Artifacts"
 sidebar_label: "SLSA"
 ---
 
-# SLSA: Your Blueprint for Securing the Software Supply Chain
+# SLSA
 
 Ever wonder how to stop supply chain attacks like SolarWinds or Log4Shell in their tracks? Enter **Supply-chain Levels for Software Artifacts**, or **[SLSA](https://slsa.dev/)** _(pronounced "salsa")_. This framework is your recipe for hardening the software you build, deliver, and consume—step by step.
 

@@ -135,14 +135,13 @@ const config: Config = {
 				alt: "Logo",
 				src: "img/trusted-foundations-icon.svg",
 			},
-			// items: [
-			// 	{
-			// 		type: "docSidebar",
-			// 		sidebarId: "tutorialSidebar",
-			// 		position: "right",
-			// 		label: "Learning",
-			// 	},
-			// ],
+			items: [
+				{
+					to: "/software-supply-chain-security",
+					label: "Articles",
+					position: "right",
+				},
+			],
 		},
 		prism: {
 			theme: prismThemes.github,

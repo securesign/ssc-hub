@@ -14,7 +14,7 @@ const chConfig = {
 
 const config: Config = {
 	title: "Trusted Foundations",
-	tagline: "Notes and tutorials",
+	tagline: "Do you know where your software comes from?",
 	favicon: "img/trusted-foundations-icon.ico",
 
 	// production url

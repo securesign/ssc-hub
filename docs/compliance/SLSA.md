@@ -4,22 +4,17 @@ title: "SLSA ・ Supply-chain Levels for Software Artifacts"
 sidebar_label: "SLSA"
 ---
 
-# SLSA
+# SLSA: Supply-chain Levels for Software Artifacts
 
-Ever wonder how to stop supply chain attacks like SolarWinds or Log4Shell in their tracks? Enter **Supply-chain Levels for Software Artifacts**, or **[SLSA](https://slsa.dev/)** _(pronounced "salsa")_. This framework is your recipe for hardening the software you build, deliver, and consume—step by step.
+[Created by Google](https://security.googleblog.com/2021/06/introducing-slsa-end-to-end-framework.html) and supported by the [Open Source Software Security Foundation](https://openssf.org/), <b>Supply-chain Levels for Software Artifacts</b>, or <b>SLSA</b> is a set of guidelines for supply chain security that help secure software artifacts from tampering.
 
-[Created by Google](https://security.googleblog.com/2021/06/introducing-slsa-end-to-end-framework.html) and supported by the [Open Source Software Security Foundation](https://openssf.org/), SLSA is the industry's answer to supply chain chaos. With four progressive levels, it helps you secure your software artifacts from tampering and build trust with end users.
-
-is a vendor-neutral security framework that provides guidance on building and delivering software securely. Supported by the [Open Source Software Security Foundation](https://openssf.org/), SLSA consists of a specification that developers can reference when identifying areas of potential improvement. It was [created by Google in 2021](https://security.googleblog.com/2021/06/introducing-slsa-end-to-end-framework.html) to help software developers fortify their supply chain security by incorporating the best industry practices end-to-end. It also enables consumers to better evaluate the software they adopt, before they adopt it.
+It benefits both the producer and consumer, as it can be used both to establish trust with potential consumers, and to facilitate security hardening for any individual or organization looking to produce secure software.
 
 ## Why does SLSA matter?
 
-Software supply chains are more vulnerable than ever:
-- Dependencies sneak in unnoticed.
-- Build environments are ripe for tampering.
-- Provenance (the “who, what, where” of your code) is often nonexistent.
+Software supply chains are more vulnerable than ever: dependencies sneak in unnoticed, build environments are ripe for tampering, and provenance (the "who, what, where" of your code) is often nonexistent.
 
-SLSA fixes these issues by providing a ladder of security maturity. Whether you're a developer or an organization, each level of SLSA improves your security posture.
+SLSA addresses these issues by providing a ladder of security maturity. Whether you're a developer or an organization, each level of SLSA improves your security posture.
 
 ## SLSA Levels & Tracks
 

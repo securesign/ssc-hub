@@ -5,7 +5,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
-
 import styles from "./index.module.css";
 
 function HomepageHeader() {
@@ -37,7 +36,7 @@ export default function Home(): ReactNode {
 	const { siteConfig } = useDocusaurusContext();
 	return (
 		<Layout
-			title={`${siteConfig.title} | Public notes on software supply chain security`}
+			title={`${siteConfig.title} | Notes on software supply chain security`}
 			description="Learn about securing your code from design to delivery <head />"
 		>
 			<HomepageHeader />
